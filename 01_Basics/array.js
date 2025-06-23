@@ -32,12 +32,14 @@ const myArr3 = [1,2,3, [4,5,6],7,8, [9,8,7,[7,6,5]]]
 // console.log(lastArray);
 
 // console.log(Array.isArray("User"))
-// console.log(Array.from("User"))
+// console.log(Array.from("User")) d
 
 
 let item1 =2012
 let item2 = 2025
 let item3 = " USer"
 let item4 = true
+let item5 = false
+let item6 = undefined
 
 console.log(Array.of(item1,item2,item3,item4))
