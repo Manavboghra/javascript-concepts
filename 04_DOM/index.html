@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+
+    <style>
+        body {
+            background-color: #212121;
+            color: antiquewhite;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="Greet">Hellooo!!</h1>
+    <ul>
+        <li>APPLE</li>
+        <li>LENOVO</li>
+        <li>SAMSUNG</li>
+        <li>ONEPLUS</li>
+        <li>BLACKBERRY</li>
+    </ul>
+
+</body>
+<script>
+
+    console.log("HEllo")
+
+    const allH1=document.getElementById("Greet")
+    console.log(allH1)
+    const d =document.querySelector("ul")
+    const dli =document.querySelectorAll("li")
+    console.log(dli)
+
+    for (let i = 0; i < dli.length; i++) {
+        console.log(dli[i].innerHTML);
+    }
+    console.log(d.children)
+
+    console.log(d.children[1].innerHTML)
+    console.log(d.firstElementChild)
+    console.log(d.lastElementChild)
+    const last = d.lastElementChild
+    last.style.color = "Yellow"
+  
+
+</script>
+
+</html>

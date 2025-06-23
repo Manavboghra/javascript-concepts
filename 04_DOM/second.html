@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #212121;
+            color: antiquewhite;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="basic">
+        <li class="fruit">Apple</li>
+    </ul>
+</body>
+
+<script>
+    function addText(frut) {
+
+        const li = document.createElement("li");
+        // li.className="fruit"
+        li.innerHTML = `${frut}`
+        document.querySelector(".basic").appendChild(li)
+    }
+    addText("Kiwi")
+
+
+    // function optiWay(frut){
+    //    const li = document.createElement("li");
+    //     li.appendChild(document.createTextNode(frut))
+    //     document.querySelector(".basic").appendChild(li)
+    // }
+    // optiWay("Litchi")
+
+
+
+
+    function neWay(text) {
+        const myele = document.createElement("li")
+        myele.appendChild(document.createTextNode(text))
+        document.querySelector(".basic").appendChild(myele)
+    }
+    neWay("Litchi")
+
+
+    const editText = document.querySelector("li:nth-child(2)");
+    const newText = document.createElement("li")
+    newText.textContent = "Banana";
+    editText.replaceWith(newText)
+
+    const removeElement = document.querySelector("li:nth-child(3)");
+    removeElement.remove();
+
+   
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>

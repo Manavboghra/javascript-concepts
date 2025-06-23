@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+</head>
+
+<body style="background-color: #212121; color: beige;">
+    <h1>This is API</h1>
+</body>
+
+<script>
+    const jsonLink = "https://api.github.com/users/Manavboghra"
+    const xr = new XMLHttpRequest()
+    const xml = xr.open('GET', jsonLink)
+    // console.log(xml)
+    xr.onreadystatechange = function () {
+        console.log(xr.readyState);
+        if (xr.readyState === 4) {
+            const data = JSON.parse(this.responseText)
+            console.log(typeof data)
+            console.log(data.created_at)
+        }
+    }
+    xr.send()
+</script>
+
+</html>
