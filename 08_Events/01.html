@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+
+</head>
+
+<body style="background-color: #212121; color: beige;">
+
+<ul class="IMG" style="display: flex; flex-wrap: wrap; list-style-type: none; padding: 0; margin: 0; direction: rtl; justify-content: space-between; gap: 10px;">
+    <li><img src="https://picsum.photos/200/300?random=1" id="1" alt=""></li> 
+    <li><img src="https://picsum.photos/200/300?random=2" id="2" alt=""></li>
+    <li><img src="https://picsum.photos/200/300?random=3" id="3" alt=""></li>
+    <li><img src="https://picsum.photos/200/300?random=4" id="4" alt=""></li>
+    <li><img src="https://picsum.photos/200/300?random=5" id="5" alt=""></li>
+    <li><img src="https://picsum.photos/200/300?random=6" id="6" alt=""></li>
+    <li><img src="https://picsum.photos/200/300?random=7" id="7" alt=""></li>
+    <li><img src="https://picsum.photos/200/300?random=8" id="8" alt=""></li>
+</ul>
+
+<h1>Hellloooo!!!</h1>
+<input type="button" value="Stop" id="stop" style="width: 100px; height: 50px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+
+</body>
+<script>
+// document.getElementById("blur").addEventListener("click", function() {
+//     alert("You clicked the image!");
+// },false);
+
+
+
+document.querySelector(".IMG").addEventListener("click",function(e){
+//    const tag = 
+    console.log(e.target.tagName);
+
+    if(e.target.tagName === "IMG"){
+        const removeIt= e.target.parentNode;
+        removeIt.remove();
+    }
+
+},false);
+
+// console.log("1")
+// const rom = setTimeout(() => {
+//     console.log("2")
+// }, 0);
+// console.log(rom)
+// console.log("3")
+
+
+// IMP Events 
+
+// type, timestamp, default Prevented
+// target, toElement, srcElement, current Target,
+// clientX, clientY, screenX, screenY
+// altkey, ctrlkey, shiftkey, keycode
+
+const printName = function(){
+    console.log("Hello Boieeee!!!");
+}
+
+setTimeout( printName, 3000 )
+
+// setTimeout( () =>{
+//     console.log("Hello Guys!!!")
+// }, 3000 )
+
+const changeText = function(){
+    const find = document.querySelector("h1");
+    find.textContent = "Hello Guys!!!";
+}
+
+ const clear = setTimeout( changeText, 5000 )
+//  setTimeout( changeText, 2000 )
+
+// clearTimeout(clear)
+
+document.querySelector("#stop").addEventListener("click", function()
+{clearTimeout(clear), console.log("Stopp!!")},
+     false);
+
+
+
+
+</script>
+
+</html>
