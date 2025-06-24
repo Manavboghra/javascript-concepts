@@ -28,3 +28,6 @@ user.forEach(u => u.user());
 
 
 let use = new User ("ram",22)
+
+
+//use of static keyword
