@@ -1,3 +1,5 @@
+//inheritance
+
 class animals{
    constructor(name){
     this.name = name
