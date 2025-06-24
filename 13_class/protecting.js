@@ -18,3 +18,5 @@ class User {
 let user = new User("Rohan")
 user.userAge=-12
 console.log(user.userAge)
+
+//protecting 
