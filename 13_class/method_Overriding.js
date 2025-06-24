@@ -1,3 +1,5 @@
+//method overriding
+
 class animals{
    constructor(name){
     this.name = name
