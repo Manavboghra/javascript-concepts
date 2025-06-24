@@ -2,9 +2,11 @@ class diaplayName{
     constructor(name){
         this.name = name
     }
-    printname(){
+    printname()
+    {
         console.log(`Hello ${this.name}`)
     }
 }
 const name= new diaplayName("AMAN")
     name.printname()
+    //this is the normal class
