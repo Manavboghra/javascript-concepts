@@ -1,3 +1,5 @@
+//construction overriding
+
 class vehicle{
     constructor(name,speed){
         this.name = name
