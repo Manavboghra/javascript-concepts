@@ -14,3 +14,5 @@ let tigar = {
 };
 
 tigar.eat()
+
+// superinternal __proto__
