@@ -37,3 +37,85 @@ mywm.set(ob2,"world");
 
 
 console.log(mywm)
+
+
+// let userIDs = new Map();
+
+// let users = [{name: 'John'}, {name: 'Murray'}, {name: 'Jane'}];
+
+// // userIDs.set(user1, 1) .set(user2, 2) .set(user3, 3);
+
+
+// // userIDs.forEach((key,value)=>{
+// // console.log(key,value)
+// // })
+
+// // for (const [key,value] of userIDs) {
+// //   console.log(key,value)
+  
+// // }
+
+// // (()=>{console.log("first")})()
+
+
+// const map = new Map(Object.entries(users))
+// console.log(map)
+// console.log(map.get("1"))
+
+
+// let obj= {name:"ram"}
+// // console.log(obj)
+// // console.log(obj.name)
+// // obj = null
+// // console.log(obj)
+// let arr = [obj]
+// console.log(arr)
+// obj = null
+// console.log(obj)  // if obj is null, although the element in array is not garbajed
+// // console.log(arr[0])
+// console.log(arr)
+
+// let obj = {name:"ram"}
+
+// let map = new Map()
+// map.set(obj,"jasi")
+// console.log(map)
+// console.log(obj)
+
+// obj = null
+
+// console.log(map)
+// console.log(obj)
+
+
+// let obj = {name:"ram"}
+
+// let map = new WeakMap()
+// map.set(obj,"jasi")
+// console.log(map)
+// console.log(obj)
+
+// obj = null
+
+// console.log(map)
+// console.log(obj)
+
+
+// let john = { name: "John" };
+
+// let weakMap = new WeakMap();
+// weakMap.set(john, "...");
+
+// john = null;
+// console.log(weakMap)
+// console.log(john)
+// console.log(weakMap)
+
+// let joh = { name: "Joh" };
+
+// let map = new Map();
+// map.set(joh, "...");
+
+// joh = null; 
+// console.log(map)
+// console.log(joh)
