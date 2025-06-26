@@ -16,4 +16,8 @@ dataBae();
 ((user) => {
     console.log(`DB Connected sucessfully!!! ${user} `);
     
-})("Manav")
+})("Manav");
+
+
+
+(function dbm(){console.log("first")})()
