@@ -43,3 +43,23 @@ let item5 = false
 let item6 = undefined
 
 console.log(Array.of(item1,item2,item3,item4))
+
+
+const colors = ["red", "green", "blue"];
+
+colors.forEach(c => {
+    console.log(c)
+    
+});
+
+for (let i=0; i<colors.length; i++){
+    console.log(colors[i])
+}
+
+for (const i of colors) {
+    console.log(i)
+}
+
+colors.map((key)=>{
+    console.log(key)
+})
