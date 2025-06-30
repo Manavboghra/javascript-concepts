@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: rgb(134, 134, 97);">
+    <div class="container">
+        <textarea class="story"></textarea>
+        <button id="set-text" type="button">Set text content</button>
+        <button id="clear-text" type="button">Clear text content</button>
+    </div>
+</body>
+<script>
+    const set = document.body.querySelector("#set-text")
+    const clear = document.body.querySelector("#clear-text")
+    const story = document.body.querySelector(".story")
+
+
+
+   const set_text = set.addEventListener("click", () => { story.innerHTML = 'Your whole context is here, if you want to clear, then press clear text button' })
+    const clear_text = clear.addEventListener("click", () => { story.innerHTML = '' })
+</script>
+
+</html>

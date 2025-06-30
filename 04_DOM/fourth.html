@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="weather">Select the weather type today: </label>
+    <select id="weather">
+        <option value="">--Make a choice--</option>
+        <option value="sunny">Sunny</option>
+        <option value="rainy">Rainy</option>
+        <option value="snowing">Snowing</option>
+        <option value="overcast">Overcast</option>
+    </select>
+
+    <p></p>
+</body>
+<script>
+   const pick=  document.querySelector("select")
+   const printText = document.querySelector("p")
+   pick.addEventListener("change",dropMessage)
+
+   function dropMessage(){
+
+    const select = pick.value;
+    if (select === "sunny"){
+        printText.textContent="Heyyyy!! its sunny weather"
+    }
+    else if(select === "overcast"){
+        printText.textContent="Ohhh!! its overcast"
+    }
+    else if(select === "snowing"){
+        printText.textContent="Annnn..!! its snowinggg"
+    }
+    else if(select === "rainy"){
+        printText.textContent="Ufff!! rainy season"
+    }
+    else 
+    {printText.innerText=""}
+   }
+
+   console.log(pick)
+   console.log(print)
+</script>
+
+</html>

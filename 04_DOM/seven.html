@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+    <div></div>
+</body>
+<script>
+    const select = document.querySelector("div")
+    const addH1 = document.createElement("h1")
+    addH1.innerText = "Hello!!!"
+    addH1.className = "heyH1"
+    addH1.style.backgroundColor = "beige"
+    const enterChild = select.appendChild(addH1)
+
+    function loadScript(src, callback) {
+        let script = document.createElement('script');
+        script.src = src;
+        script.onload = () => callback(script);
+        document.head.append(script);
+    }
+
+
+    loadScript('https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.2.0/lodash.js', function (script) {
+
+        alert(`Cool, the ${script.src} is loaded, let's load one more`);
+
+        loadScript('/my/script2.js', function (script) {
+            alert(`Cool, the second script is loaded`);
+        });
+
+    });
+    
+
+</script>
+
+</html>
