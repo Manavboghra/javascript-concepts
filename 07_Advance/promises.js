@@ -95,3 +95,27 @@ fetch("https://jsonplaceholder.typicode.com/posts")
 }).catch((err)=>{
     console.log(err)
 })
+
+
+// const promise = new Promise(function(resolve,reject){
+//    const i = 5
+//    if(i==7){
+//       console.log(`Number is ${i}`)
+//       resolve()
+//    }
+//    else reject("ERRRORRR!!")
+// }).then(() => console.log("first")).catch(e=>console.log(e))
+
+
+new Promise((resolve,reject)=>{
+   const name = "pada"
+   const pass = "panda@123"
+
+   if(name != "panda" || pass != "panda@123" )
+   {
+      setTimeout(()=>{reject("Uffff... Something wrong")},5000)
+   }
+   else{
+      resolve(`Welcome ${name}`)
+   }
+}).then((res)=>{console.log(res)}).catch((e)=>{console.log(e)})
