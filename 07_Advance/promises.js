@@ -119,3 +119,13 @@ new Promise((resolve,reject)=>{
       resolve(`Welcome ${name}`)
    }
 }).then((res)=>{console.log(res)}).catch((e)=>{console.log(e)})
+
+
+const p = new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        reject("You have been blocked")
+    }
+    ,5000)
+})
+
+p.then(null,function(e){console.log(`Caused Error:${e}`)})
