@@ -9,24 +9,44 @@
 
 <body style="background-color: #212121; color: beige;">
     <h1>This is API</h1>
+    <!-- <input type="file" onchange="upload(this.files[0])"> -->
 </body>
 
 <script>
-    const jsonLink = "https://api.github.com/users/Manavboghra"
-    const xr = new XMLHttpRequest()
-    const xml = xr.open('GET', jsonLink)
-    // console.log(xml)
-    xr.onreadystatechange = function () {
-        console.log(xr.readyState);
-        if (xr.readyState === 4) {
-            const data = JSON.parse(this.responseText)
-            // console.log(typeof data)
-            console.log(data.created_at)
-        }
-    }
-    xr.send()
+    // const jsonLink = "https://api.github.com/users/Manavboghra"
+    // const xr = new XMLHttpRequest()
+    // const xml = xr.open('GET', jsonLink)
+    // // console.log(xml)
+    // xr.onreadystatechange = function () {
+    //     console.log(xr.readyState);
+    //     if (xr.readyState === 4) {
+    //         const data = JSON.parse(this.responseText)
+    //         // console.log(typeof data)
+    //         console.log(data.created_at)
+    //     }
+    // }
+    // xr.send()
+    // function upload(file) {
+    //     // let xhr = new XMLHttpRequest();
 
 
+    //     const jsonLink = "https://httpbin.org/post"
+    //     const xr = new XMLHttpRequest()
+    //     xr.upload.onprogress = function (event) {
+    //         console.log(`uploaded: ${event.loaded} of ${event.total}`)
+    //     }
+    //     xr.onloadend = function () {
+    //         if (xr.status == 200) {
+    //             console.log("success");
+    //         } else {
+    //             console.log("error " + this.status);
+    //         }
+    //     };
+
+    //     const xml = xr.open('POST', jsonLink)
+    //     xr.send(file);
+
+    // }
+    
 </script>
-
 </html>

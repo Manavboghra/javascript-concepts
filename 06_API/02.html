@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: beige;">
+    <p></p>
+    <button>Click for Random Name</button>
+</body>
+<script>
+    const getFacts = async () => {
+        const dataPrint = document.querySelector("p")
+        const dataClick = document.querySelector("button")
+        const url = "https://potterapi-fedeperin.vercel.app/en/characters"
+        const data = await fetch(url)
+        console.log(data)
+        let finalData = await data.json()
+        console.log(finalData)
+
+        dataClick.addEventListener("click", () => {
+            const max = 23;
+            const min = 1;
+
+            let randomNumber = Math.round((Math.random()*(max-min+1))+min)
+            console.log(randomNumber)
+            const finalDataPrint = finalData[randomNumber].fullName
+            console.log(finalDataPrint)
+            dataPrint.innerText = finalDataPrint
+        })
+
+    }
+    getFacts()
+
+    // const url = "https://dogapi.dog/api/v2/breeds"
+    // const data = fetch(url)
+    // console.log(data)
+    // data.then((response)=>{ return response.json()}).then((res)=>{console.log(res)})
+
+</script>
+
+</html>
