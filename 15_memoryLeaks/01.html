@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121;">
+        <button>Click ME</button>
+</body>
+<script>
+    function addLeakyListener() {
+    const button = document.querySelector("button");
+    console.log(button)
+
+    function handleClick() {
+        console.log("Button clicked!");
+    }
+
+    // Adds event listener
+    button.addEventListener("click", handleClick);
+    }
+    addLeakyListener()
+</script>
+</html>
