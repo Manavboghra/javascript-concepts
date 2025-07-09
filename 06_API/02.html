@@ -8,12 +8,14 @@
 </head>
 
 <body style="background-color: beige;">
-    <p></p>
+    <p id="pa"></p>
     <button>Click for Random Name</button>
+    <p id="para"></p>
 </body>
 <script>
     const getFacts = async () => {
-        const dataPrint = document.querySelector("p")
+        const dataPrint = document.getElementById("pa")
+        const dataPrint1 = document.getElementById("para")
         const dataClick = document.querySelector("button")
         const url = "https://potterapi-fedeperin.vercel.app/en/characters"
         const data = await fetch(url)
@@ -27,9 +29,19 @@
 
             let randomNumber = Math.round((Math.random()*(max-min+1))+min)
             console.log(randomNumber)
+
+
+            // for (const e of finalData) {
+            //     // console.log(e.fullName)
+            // }
+            
             const finalDataPrint = finalData[randomNumber].fullName
+            const finalnickname = finalData[randomNumber].interpretedBy
             console.log(finalDataPrint)
-            dataPrint.innerText = finalDataPrint
+            console.log(finalnickname)
+            dataPrint.innerText = finalDataPrint 
+            dataPrint1.innerText = finalnickname
+            // dataClick.innerText = finalData[randomNumber].fullName
         })
 
     }

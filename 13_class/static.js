@@ -1,26 +1,29 @@
 
-// class User {
-//     constructor(username, age, id) {
-//         this.username = username;
-//         this.age = age;
-//         this.id = User.generateID();
-//     }
+class User {
+    constructor(username, age, id) {
+        this.username = username;
+        this.age = age;
+        this.id = User.generateID();
+    }
 
-//     static generateID() {
-//         const letters = '0123456789abcdef-';
-//         let randomId= "";
-//         for (let i = 0; i < 10; i++) {
-//             randomId += letters[Math.floor(Math.random() * 17)];
-//         }
-//         return randomId;
+    static generateID() {
+        const letters = '0123456789abcdef-';
+        let randomId= "";
+        for (let i = 0; i < 10; i++) {
+            randomId += letters[Math.floor(Math.random() * 17)];
+        }
+        return randomId;
         
-//     }
-//     user() {
-//         // const id = User.generateID()
-//         console.log(`ID:${this.id} Name:${this.username}, Age:${this.age}`)
-//     }
-// }
-// // const user = new User("Attharva",21)
+    }
+    user() {
+        // const id = User.generateID()
+        console.log(`ID:${this.id} Name:${this.username}, Age:${this.age}`)
+    }
+}
+const us = User.generateID()
+const user = new User("Attharva",21)
+// const test =user.generateID()
+console.log(us)
 
 
 // let user = [
